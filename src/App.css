@@ -1,38 +1,171 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #f2f2f2;
+  background-color: #3c3963;
+  align-items: center;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 2px solid #f2f2f2;
+  color: #ffcd05;
+}
+.navbar h1 {
+  color: #ffcd05;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  color: #ffcd05;
+}
+.navbar a:hover {
+  color: #f2f2f2;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* blog previews / list */
+.blog-preview {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 2px solid #f2f2f2;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blog-preview h2 {
+  font-size: 20px;
+  color: #ffcd05;
+  margin-bottom: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.blog-preview a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* blog details page */
+.blog-details h2 {
+  font-size: 20px;
+  color: #ffcd05;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 20px;
+}
+.blog-details h4 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.blog-details h6 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+/*
+.blog-details2{
+  padding: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}*/
+
+.blog-details div {
+  margin: 20px 0;
+  align-items: center;
+}
+.blog-details button {
+  background: #ffcd05;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.blog-comment {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.blog-comment label {
+  text-align: left;
+  display: block;
+}
+.blog-comment h2 {
+  font-size: 20px;
+  color: #ffcd05;
+  margin-bottom: 30px;
+}
+.blog-comment input,
+.blog-comment textarea,
+.blog-comment select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #ffcd05;
+  color: #282c34;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* create */
+
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #ffcd05;
+  margin-bottom: 30px;
+}
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #ffcd05;
+  color: #282c34;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }
