@@ -82,49 +82,57 @@ export default function App() {
               return <div>Not Found</div>;
             }
             return (
-              <div className="blog-details">
-                <article>
-                  <h2>{thread.topic}</h2>
-                  <h4>Writen by {thread.writer}</h4>
-                  <h6>{thread.body}</h6>
-                </article>
-                <div>
-                  <form
-                    onSubmit={(e) => {
-                      onNewComment(e, thread.id, commentToppic, commentWriter);
-                    }}
-                  >
-                    <div>
-                      <span>Comment Topic : </span>
-                      <textarea
-                        value={commentToppic}
-                        onChange={(topic) =>
-                          setCommentTopic(topic.target.value)
-                        }
-                      />
-                    </div>
-                    <div>
-                      <span>Comment Writer : </span>
-                      <textarea
-                        value={commentWriter}
-                        onChange={(writer) =>
-                          setCommentWriter(writer.target.value)
-                        }
-                      />
-                    </div>
-                    <button>Submit Comment</button>
-                  </form>
-                </div>
-                <div>
-                  {thread.comments.map((comments) => {
-                    return (
-                      <div key={comments.id}>
-                        <div>
-                          <div>comment : {comments.topic}</div>
-                        </div>
+              <div>
+                <div className="blog-details">
+                  <article>
+                    <h2>{thread.topic}</h2>
+                    <h4>Writen by {thread.writer}</h4>
+                    <h6>{thread.body}</h6>
+                  </article>
+                  <div className="create-comment">
+                    <form
+                      onSubmit={(e) => {
+                        onNewComment(
+                          e,
+                          thread.id,
+                          commentToppic,
+                          commentWriter
+                        );
+                      }}
+                    >
+                      <div>
+                        <span>Comment Topic : </span>
+                        <textarea
+                          value={commentToppic}
+                          onChange={(topic) =>
+                            setCommentTopic(topic.target.value)
+                          }
+                        />
                       </div>
-                    );
-                  })}
+                      <div>
+                        <span>Comment Writer : </span>
+                        <textarea
+                          value={commentWriter}
+                          onChange={(writer) =>
+                            setCommentWriter(writer.target.value)
+                          }
+                        />
+                      </div>
+                      <button>Submit Comment</button>
+                    </form>
+                  </div>
+                  <div className="blog-details">
+                    {thread.comments.map((comments) => {
+                      return (
+                        <div key={comments.id}>
+                          <div>
+                            <h4>comment : {comments.topic}</h4>
+                            <h4>auther: {comments.writer}</h4>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             );
